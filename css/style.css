@@ -99,44 +99,62 @@ nav ul li a img {
 
 #innerWrapper {
     width: 100%;
-    float: right;
-      display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 1fr ; 
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-        ".  ommarme ommarme   om0"
-        ".  omgr   omgr   ."
-        ".  .   .   .   "
-        ".  .   .   .   ";
+    
 }
 
 #omMarmelade {
     background: #d9c7c5;
-    padding: 20px 50px 20px 18%;
+    padding: 5px 5px 5px 18%;
     vertical-align: top;
-    grid-area: ommarme;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
+    grid-template-areas: 
+        "h1 h1  h1"
+        "blåbær blåbær  blåbær"
+        "næring  næring  ."
+        "energi  energi  .";
+}
+    
+
+#blåbær {
+    grid-area: blåbær; 
 }
 
 #omMarmImg0 {
     display: none;
-    grid-area: om0;
-}
-
-#omMarmImg1 {
+    
     
 }
 
+#næring {
+    grid-area: næring;
+}
+
+#energi {
+    grid-area: energi;
+}
+
+
+#omMarmImg1 {
+    grid-area: img1;
+}
+
 #omMarmImg2 {
+    grid-area: img2;
+    display: block; 
     
 }
 
 
 #omGroenBalance {
     padding: 20px 50px 20px 18%;
-    grid-area: omgr;
+
 }
 
 #omGBimg1 {
+    display: none;
     
 }
 
@@ -147,6 +165,7 @@ nav ul li a img {
 #kage1 {
     background: #d9c7c5;
     padding: 20px 50px 20px 18%;
+    grid-area: kage1;
 }
 
 #kage1Img {
@@ -155,6 +174,7 @@ nav ul li a img {
 
 #kage2 {
     padding: 20px 50px 20px 18%;
+    grid-area: kage2;
 }
 
 #kage2Img {
@@ -169,6 +189,7 @@ nav ul li a img {
 #butikker { 
     background: #d9c7c5;
     padding: 20px 50px 20px 18%;
+    grid-area: butik;
 }
 
 #sparLogo {
@@ -196,6 +217,7 @@ h1 {
     width: 100%;
     text-align: center;
     text-transform: uppercase;
+    grid-area: h1;
 }
 
 .bold {
