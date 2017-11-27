@@ -28,7 +28,7 @@ header {
     display: block;
     width: 100%;
     background-repeat: repeat-x;
-    background-image: url("../grafik/jule_guirlande.png");
+    background-image: url("../grafik/jule_guirlande2.png");
     position: fixed;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(15px 15px 15px #222);
@@ -181,7 +181,6 @@ nav ul li a img {
     
 }
 
-
 #omMarmelade img, #omGroenBalance img, #kage1 img, #kage2 img {
     width: 30%;
 }
@@ -256,7 +255,6 @@ footer {
 /************************************ TABLET **********************************/
 /******************************************************************************/
 @media screen and (max-width: 768px) {
-   @media screen and (max-width: 768px) {
        
     /*********************HEADER*************************/
     
@@ -373,18 +371,9 @@ footer {
 
     #footerText {
         font-size: 90%;
-    }    
-    
-    
-    
-    
-}*/
-   
-    
-    
-    
-    
-}*/
+    }        
+        
+}
 
 
 /******************************************************************************/
@@ -406,7 +395,7 @@ footer {
     }
 
     /********************** MENU/LOGO ********************/
-    #gbLogo, #deskMenu {
+    #gbLogo, #deskMenu a {
         display: none;
     }
     
@@ -414,16 +403,19 @@ footer {
         height: 50px;
         width: 100%;
         background-color: #34733d;
+        position: fixed;
+        top: -20px;
     }
     
     .burgermenu {
-    position: relative;
-    display: inline-block;
-    }
+        position: relative;
+        top: 0;
+        display: block;
+        }
 
     .burgerknap {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 30px;
         background-color: #34733d;
         color: #fff;
         border: none;
@@ -431,7 +423,7 @@ footer {
     }
 
     .burgerDD {
-        display: block;
+        display: none;
         position: absolute;
         background-color: #34733d;
         min-width: 200px;
@@ -451,6 +443,10 @@ footer {
 
     .burgermenu:hover .burgerDD {
         display: block;
+    }
+    
+    .burgermenu:hover::after {
+        display: none;
     }
     
     /********************** SEPARATOR ********************/
