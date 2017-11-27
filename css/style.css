@@ -233,7 +233,6 @@ footer {
 /************************************ TABLET **********************************/
 /******************************************************************************/
 @media screen and (max-width: 768px) {
-   @media screen and (max-width: 768px) {
        
     /*********************HEADER*************************/
     
@@ -350,18 +349,9 @@ footer {
 
     #footerText {
         font-size: 90%;
-    }    
-    
-    
-    
-    
-}*/
-   
-    
-    
-    
-    
-}*/
+    }        
+        
+}
 
 
 /******************************************************************************/
@@ -383,12 +373,12 @@ footer {
     }
 
     /********************** MENU/LOGO ********************/
-    #gbLogo, #deskMenu {
+    #gbLogo, #deskMenu li a img {
         display: none;
     }
     
     nav {
-        height: 60px;
+        height: 50px;
         width: 100%;
         background-color: #34733d;
         position: fixed;
@@ -402,16 +392,16 @@ footer {
         }
 
     .burgerknap {
-        width: 50px;
-        height: 50px;
-        background-color: #bf343f;
+        width: 40px;
+        height: 30px;
+        background-color: #34733d;
         color: #fff;
         border: none;
         cursor: pointer;
     }
 
     .burgerDD {
-        display: block;
+        display: none;
         position: absolute;
         background-color: #34733d;
         min-width: 200px;
@@ -431,6 +421,10 @@ footer {
 
     .burgermenu:hover .burgerDD {
         display: block;
+    }
+    
+    .burgermenu:hover::after {
+        display: none;
     }
     
     /********************** SEPARATOR ********************/
