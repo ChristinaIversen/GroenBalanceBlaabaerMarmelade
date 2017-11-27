@@ -28,7 +28,7 @@ header {
     display: block;
     width: 100%;
     background-repeat: repeat-x;
-    background-image: url("../grafik/jule_guirlande.png");
+    background-image: url("../grafik/jule_guirlande2.png");
     position: fixed;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(15px 15px 15px #222);
@@ -373,7 +373,7 @@ footer {
     }
 
     /********************** MENU/LOGO ********************/
-    #gbLogo, #deskMenu li a img {
+    #gbLogo, #deskMenu a {
         display: none;
     }
     
