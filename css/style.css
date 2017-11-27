@@ -18,6 +18,7 @@ body {
 #wrapper {
     width: 100%;
     height: 100%;
+       
 }
 
 /******************************************************************************/
@@ -99,16 +100,26 @@ nav ul li a img {
 #innerWrapper {
     width: 100%;
     float: right;
+      display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr ; 
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        ".  ommarme ommarme   om0"
+        ".  omgr   omgr   ."
+        ".  .   .   .   "
+        ".  .   .   .   ";
 }
 
 #omMarmelade {
     background: #d9c7c5;
     padding: 20px 50px 20px 18%;
     vertical-align: top;
+    grid-area: ommarme;
 }
 
 #omMarmImg0 {
     display: none;
+    grid-area: om0;
 }
 
 #omMarmImg1 {
@@ -122,6 +133,7 @@ nav ul li a img {
 
 #omGroenBalance {
     padding: 20px 50px 20px 18%;
+    grid-area: omgr;
 }
 
 #omGBimg1 {
@@ -220,8 +232,131 @@ footer {
 /******************************************************************************/
 /************************************ TABLET **********************************/
 /******************************************************************************/
-/*@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+   @media screen and (max-width: 768px) {
        
+    /*********************HEADER*************************/
+    
+    header {
+        display: none;
+        
+    }
+    
+    #guirlande {
+        display: block;
+    
+    }
+    
+    #hero {
+        display: block;
+    }
+    
+    
+    /********************** MENU/LOGO ********************/
+    #gbLogo {            
+        display: block;
+    }
+    
+    nav {
+        display: block;
+    }
+    
+    #burgermenu {
+        display: contents;
+    }
+    
+    /********************** SEPARATOR ********************/
+    #separator {
+        display: none;
+    }
+
+    /******************** OM MARMELADEN ******************/
+    #omMarmelade {
+        background: #d9c7c5;
+        padding: 10px 0 20px;
+        vertical-align: top;
+    }
+    
+    #omMarmImg0 {
+        display: none;
+        width: 100%;
+    }
+    
+    #omMarmImg1 {
+        display: none;
+        float: right; 
+        
+    }
+
+    #omMarmImg2 {
+        display: none;
+        float: right;
+    }
+    
+    /******************* OM GRØN BALANCE *****************/
+    #omGroenBalance {
+        padding: 10px 0 20px;
+    }
+    
+    #omGBimg1 {
+        
+    }
+
+    #omGBimg2 {
+        display: none;
+        float: right;
+    }
+    
+    /************************ KAGE 1 *********************/
+    #kage1 {
+        background: #d9c7c5;
+        padding: 10px 0 20px;
+    }
+
+    /************************ KAGE 2 *********************/
+    #kage2 {
+        padding: 10px 0 20px;
+    }
+
+    /*********************** IMG SIZE ********************/
+    #omMarmelade img, #omGroenBalance img, #kage1 img, #kage2 img {
+        width: 100%;
+    }
+
+    /********************** BUTIKKER *********************/
+    #butikker {    
+        background: #d9c7c5;
+        padding: 10px 0 20px;
+    }
+
+    /*************** GÆLDER ALT I KATEGORI ***************/
+    h1 {
+        font-size: 120%;
+        margin: 10px 0 20px 0;
+    }
+    
+    section p {
+        padding: 15px;
+    }
+
+    /*********************** FOOTER **********************/
+    footer {
+        background-size: 150px;
+    }
+
+    #juletraer {
+        height: 56px;   
+    }
+
+    #footerText {
+        font-size: 90%;
+    }    
+    
+    
+    
+    
+}*/
+   
     
     
     
@@ -381,6 +516,8 @@ footer {
         font-size: 90%;
     }    
 }
+
+
 
 
 
