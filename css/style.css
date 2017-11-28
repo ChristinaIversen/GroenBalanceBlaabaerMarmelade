@@ -169,7 +169,6 @@ nav ul li a img {
     display: block;     
 }
 
-
 #omGroenBalance {
     background-color: #d9c7c5;
     padding: 30px 30px 30px 18%;
@@ -210,20 +209,68 @@ nav ul li a img {
     background: #fff;
     padding: 20px 50px 20px 18%;
     grid-area: kage1;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-areas: 
+        "h1 h1 h1 h1 h1"
+        "kage1Img kage1Img kage1Img kage1Img kage1Img"
+        "ingri ingri ingri ingri ingri"
+        "kage1txt1 kage1txt1 kage1txt1 kage1txt1 kage1txt1"
+        "kage1txt2 kage1txt2 kage1txt2 kage1txt2 kage1txt2"
+        "kage1txt3 kage1txt3 kage1txt3 kage1txt3 kage1txt3"
+        "kage1txt4 kage1txt4 kage1txt4 kage1txt4 kage1txt4"
+        "kage1txt5 kage1txt5 kage1txt5 kage1txt5 kage1txt5";
 }
 
 #kage1Img {
-    
+    grid-area: kage1Img;
+}
+
+.ingridienser {
+    grid-area: ingri;
+}
+
+#kage1Txt1 {
+    grid-area: kage1txt1;
+}
+
+#kage1Txt2 {
+    grid-area: kage1txt2;
+}
+
+#kage1Txt3 {
+    grid-area: kage1txt3;
+}
+
+#kage1Txt4 {
+    grid-area: kage1txt4;
+}
+
+#kage1Txt5 {
+    grid-area: kage1txt5;
 }
 
 #kage2 {
     background-color: #d9c7c5;
     padding: 20px 50px 20px 18%;
     grid-area: kage2;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-areas: 
+        "h1 h1 h1 h1 h1"
+        "kage2Img kage2Img kage2Img kage2Img kage2Img"
+        "ingri ingri ingri ingri ingri"
+        "kage2txt1 kage2txt1 kage2txt1 kage2txt1 kage2txt1";
 }
 
 #kage2Img {
-    
+    grid-area: kage2Img;
+}
+
+#kage2Txt1{
+    grid-area: kage2txt1;
 }
 
 #omMarmelade img, #omGroenBalance img, #kage1 img, #kage2 img {
@@ -234,24 +281,38 @@ nav ul li a img {
     background: #fff;
     padding: 20px 50px 20px 18%;
     grid-area: butik;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-areas: 
+        "h1 h1 h1 h1 h1"
+        ". sparLogo mkLogo menyLogo .";
 }
 
 #sparLogo {
-    width: 29.1%;
-    margin: 50px 2% 50px 0;
-    display: inline-block;
+    width: 70%;
+    margin: auto;
+    padding: 10px 5px;
+    grid-area: sparLogo;
 }
 
 #mkLogo {
-    width: 29.1%;
-    margin: 50px 2%;
-    display: inline-block;
+    width: 70%;
+    margin: auto;
+    padding: 10px 5px;
+    grid-area: mkLogo;
 }
 
 #menyLogo {
-    width: 29.1%;
-    margin: 50px 0 50px 2%;
-    display: inline-block;
+    width: 70%;
+    margin: auto;
+    padding: 10px 5px;
+    grid-area: menyLogo;
+}
+
+#KogE {
+    width: 100%;  
+    grid-area: koge;
 }
 
 h1 {
@@ -455,31 +516,32 @@ footer {
     #kage1 {
         grid-gap: 0px;
         grid-template-areas: 
-            "img0 img0 img0 img0 img0"
+            "kage1Img kage1Img kage1Img kage1Img kage1Img"
             "h1 h1 h1 h1 h1"
-            "blaabaer blaabaer blaabaer blaabaer blaabaer"
-            "naering naering naering naering kj"
-            "info info . . .";
+            "ingri ingri ingri ingri ingri"
+            "kage1txt1 kage1txt1 kage1txt1 kage1txt1 kage1txt1"
+            "kage1txt2 kage1txt2 kage1txt2 kage1txt2 kage1txt2"
+            "kage1txt3 kage1txt3 kage1txt3 kage1txt3 kage1txt3"
+            "kage1txt4 kage1txt4 kage1txt4 kage1txt4 kage1txt4"
+            "kage1txt5 kage1txt5 kage1txt5 kage1txt5 kage1txt5";
     }
     
     #kage2{
         grid-gap: 0px;
         grid-template-areas: 
-            "img0 img0 img0 img0 img0"
+            "kage2Img kage2Img kage2Img kage2Img kage2Img"
             "h1 h1 h1 h1 h1"
-            "blaabaer blaabaer blaabaer blaabaer blaabaer"
-            "naering naering naering naering kj"
-            "info info . . .";
+            "ingri ingri ingri ingri ingri"
+            "kage2txt1 kage2txt1 kage2txt1 kage2txt1 kage2txt1";
     }
     
     #butikker {
         grid-gap: 0px;
         grid-template-areas: 
-            "img0 img0 img0 img0 img0"
             "h1 h1 h1 h1 h1"
-            "blaabaer blaabaer blaabaer blaabaer blaabaer"
-            "naering naering naering naering kj"
-            "info info . . .";
+            ". sparLogo sparLogo sparLogo ."
+            ". mkLogo mkLogo mkLogo ."
+            ". menyLogo menyLogo menyLogo .";
     }
     
     /*********************** BODY ************************/
