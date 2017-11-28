@@ -10,7 +10,7 @@
 /*********************************** BODY *************************************/
 body {
     font-family: 'Lato', sans-serif;
-    font-size: 18px;
+    font-size: 100%;
 }
 
 /******************************************************************************/
@@ -172,17 +172,38 @@ nav ul li a img {
 
 #omGroenBalance {
     background-color: #d9c7c5;
-    padding: 20px 50px 20px 18%;
-
+    padding: 30px 30px 30px 18%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    /*grid-template-rows: 1fr 1fr 1fr 1fr;*/
+    grid-template-areas: 
+        "h1 h1 h1 h1 h1"
+        "gbImg1 gbImg1 gbImg1 gbImg1 gbImg1"
+        "gbImg2 gbImg2 gbImg2 gbImg2 gbImg2"
+        "gbTxt1 gbTxt1 gbTxt1 gbTxt1 gbTxt1"
+        "gbTxt2 gbTxt2 gbTxt2 gbTxt2 gbTxt2"
+        "gbTxt3 gbTxt3 gbTxt3 gbTxt3 gbTxt3";
 }
 
 #omGBimg1 {
-    display: none;
-    
+    grid-area: gbImg1;
 }
 
 #omGBimg2 {
-    
+    grid-area: gbImg2;
+}
+
+#omGBtxt1 {
+    grid-area: gbTxt1;
+}
+
+#omGBtxt2 {
+    grid-area: gbTxt2;
+}
+
+#omGBtxt3 {
+    grid-area: gbTxt3;
 }
 
 #kage1 {
@@ -237,6 +258,7 @@ h1 {
     color: #bf343f;
     font-size: 150%;
     font-weight: 700;
+    margin: 0 0 20px 0;
     width: 100%;
     text-align: center;
     text-transform: uppercase;
@@ -423,11 +445,11 @@ footer {
     #omGroenBalance {
         grid-gap: 0px;
         grid-template-areas: 
-            "img0 img0 img0 img0 img0"
+            "gbImg1 gbImg1 gbImg1 gbImg1 gbImg1"
             "h1 h1 h1 h1 h1"
-            "blaabaer blaabaer blaabaer blaabaer blaabaer"
-            "naering naering naering naering kj"
-            "info info . . .";
+            "gbTxt1 gbTxt1 gbTxt1 gbTxt1 gbTxt1"
+            "gbTxt2 gbTxt2 gbTxt2 gbTxt2 gbTxt2"
+            "gbTxt3 gbTxt3 gbTxt3 gbTxt3 gbTxt3";
     }
     
     #kage1 {
@@ -541,7 +563,7 @@ footer {
     /******************** OM MARMELADEN ******************/
     #omMarmelade {
         background: #fff;
-        padding: 10px 0 20px;
+        padding: 30px 0 10px;
         vertical-align: top;
     }
     
@@ -560,11 +582,12 @@ footer {
     
     /******************* OM GRØN BALANCE *****************/
     #omGroenBalance {
-        padding: 10px 0 20px;
+        padding: 0 0 10px;
     }
     
     #omGBimg1 {
-        
+        display: block;
+        width: 100%;
     }
 
     #omGBimg2 {
@@ -574,12 +597,12 @@ footer {
     /************************ KAGE 1 *********************/
     #kage1 {
         background: #fff;
-        padding: 10px 0 20px;
+        padding: 0 0 10px;
     }
 
     /************************ KAGE 2 *********************/
     #kage2 {
-        padding: 10px 0 20px;
+        padding: 0 0 10px;
     }
 
     /*********************** IMG SIZE ********************/
@@ -590,7 +613,7 @@ footer {
     /********************** BUTIKKER *********************/
     #butikker {    
         background: #fff;
-        padding: 10px 0 20px;
+        padding: 0 0 10px;
     }
 
     /*************** GÆLDER ALT I KATEGORI ***************/
