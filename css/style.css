@@ -18,7 +18,16 @@ body {
 #wrapper {
     width: 100%;
     height: 100%;
-       
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 0.5fr 1.3fr 1fr 1fr 1fr 0.3fr;
+    grid-template-areas: 
+        "header  header  header"
+        "hero     hero    hero"
+        "hero    hero    hero"
+        "separator   separator   separator"
+        "innerwrapper    innerwrapper    innerwrapper"
+        "footer  footer  footer";   
 }
 
 /******************************************************************************/
@@ -32,6 +41,8 @@ header {
     position: fixed;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(15px 15px 15px #222);
+    grid-area: header;
+    grid-column-end: span 4;
 }
 
 #guirlande {
@@ -56,6 +67,7 @@ nav {
     padding: 20px 0;
     position: fixed;
     top: 150px;
+    /*grid-area: nav;*/
 }
 
 nav ul li {
@@ -85,6 +97,7 @@ nav ul li a img {
 /******************************************************************************/
 #hero {
     width: 100%;
+    grid-area: hero;
 }
 
 #heroImg {
@@ -95,47 +108,43 @@ nav ul li a img {
 #separator {
     background-repeat: repeat-x;
     background-image: url("../grafik/candy-cane.png");
+    grid-area: separator;
 }
 
 #innerWrapper {
     width: 100%;
-    
+    grid-area: innerwrapper;    
 }
 
 #omMarmelade {
     background: #d9c7c5;
     padding: 5px 5px 5px 18%;
     vertical-align: top;
-    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
     grid-template-rows: 1fr 1fr 1fr 1fr ;
     grid-template-areas: 
-        "h1 h1  h1"
-        "blåbær blåbær  blåbær"
-        "næring  næring  ."
-        "energi  energi  .";
+        "h1 h1 h1"
+        "blaabaer blaabaer blaabaer"
+        "naering naering img2"
+        "energi energi img1";
 }
-    
-
-#blåbær {
-    grid-area: blåbær; 
-}
-
+  
 #omMarmImg0 {
-    display: none;
-    
-    
+    display: none;   
 }
 
-#næring {
-    grid-area: næring;
+#blaabaer {
+    grid-area: blaabaer; 
+}
+
+#naering {
+    grid-area: naering;
 }
 
 #energi {
     grid-area: energi;
 }
-
 
 #omMarmImg1 {
     grid-area: img1;
@@ -143,8 +152,7 @@ nav ul li a img {
 
 #omMarmImg2 {
     grid-area: img2;
-    display: block; 
-    
+    display: block;     
 }
 
 
@@ -230,6 +238,7 @@ footer {
     background-repeat: repeat-x;
     background-image: url("../grafik/juletrae_border.png");
     clear: both;
+    grid-area: footer;
 }
 
 #juletraer {
