@@ -10,7 +10,7 @@
 /*********************************** BODY *************************************/
 body {
     font-family: 'Lato', sans-serif;
-    font-size: 100%;
+    font-size: 110%;
 }
 
 /******************************************************************************/
@@ -44,6 +44,7 @@ header {
     filter: drop-shadow(15px 15px 15px #222);
     grid-area: header;
     grid-column-end: span 4;
+    z-index: 1;
 }
 
 #guirlande {
@@ -69,6 +70,7 @@ nav {
     position: fixed;
     top: 150px;
     /*grid-area: nav;*/
+    z-index: 1;
 }
 
 nav ul li {
@@ -118,19 +120,19 @@ nav ul li a img {
 }
 
 #omMarmelade {
-    background-color: #fff;
+    background-color: #ececec;
     padding: 30px 30px 30px 18%;
     vertical-align: top;
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-    /*grid-template-rows: 1fr 1fr 1fr 1fr;*/
+    grid-template-rows: 0.1fr 0.5fr 2fr 1fr 1fr;
     grid-template-areas: 
         "h1 h1 h1 h1 h1"
-        "blaabaer blaabaer img2 img2 img2"
-        "img1 img1 img1 naering ."
-        ". . . naering kj"
-        ". . . info .";
+        "blaabaer blaabaer blaabaer img1 img1"
+        "img2 img2 img2 img1 img1"
+        "img2 img2 img2 naering kj"
+        "img2 img2 img2 info info";
 }
 
 #blaabaer {
@@ -152,6 +154,7 @@ nav ul li a img {
 
 #mereInfo {
     grid-area: info;
+    text-align: center;
 }
   
 #omMarmImg0 {
@@ -166,11 +169,19 @@ nav ul li a img {
 
 #omMarmImg2 {
     grid-area: img2;
-    display: block;     
+    display: block; 
+    margin-left: -150px;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(15px 15px 15px #222);
+    z-index: 0;
 }
 
 #omGroenBalance {
-    background-color: #d9c7c5;
+    background-color: #d9c6c4;
+    /*background-image: url(../billeder/mennesker/IMG_0746.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;*/
     padding: 30px 30px 30px 18%;
     display: grid;
     grid-gap: 20px;
@@ -178,8 +189,8 @@ nav ul li a img {
     /*grid-template-rows: 1fr 1fr 1fr 1fr;*/
     grid-template-areas: 
         "h1 h1 h1 h1 h1"
-        "gbImg1 gbImg1 gbImg1 gbImg1 gbImg1"
-        "gbImg2 gbImg2 gbImg2 gbImg2 gbImg2"
+        "gbImg1 gbImg1 . . ."
+        ". . . gbImg2 gbImg2"
         "gbTxt1 gbTxt1 gbTxt1 gbTxt1 gbTxt1"
         "gbTxt2 gbTxt2 gbTxt2 gbTxt2 gbTxt2"
         "gbTxt3 gbTxt3 gbTxt3 gbTxt3 gbTxt3";
@@ -274,7 +285,7 @@ nav ul li a img {
 }
 
 #omMarmelade img, #omGroenBalance img, #kage1 img, #kage2 img {
-    width: 30%;
+    width: 100%;
 }
 
 #butikker { 
