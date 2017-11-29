@@ -51,6 +51,10 @@ header {
     display: block;    
 }
 
+#mobilLogo {
+    display: none;
+}
+
 /******************************************************************************/
 /********************************** MENU/LOGO *********************************/
 /******************************************************************************/
@@ -112,6 +116,8 @@ nav ul li a img {
     background-repeat: repeat-x;
     background-image: url("../grafik/candy-cane.png");
     grid-area: separator;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(15px 15px 15px #222);
 }
 
 #innerWrapper {
@@ -126,7 +132,6 @@ nav ul li a img {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 0.1fr 0.5fr 2fr 1fr 1fr;
     grid-template-areas: 
         "h1 h1 h1 h1 h1"
         "blaabaer blaabaer blaabaer img1 img1"
@@ -177,43 +182,50 @@ nav ul li a img {
 }
 
 #omGroenBalance {
-    background-color: #d9c6c4;
-    /*background-image: url(../billeder/mennesker/IMG_0746.jpg);
+    /*background-color: #d9c6c4;*/
+    background-image: url(../billeder/produkt/omGBbg.png);
     background-position: bottom;
     background-size: cover;
-    background-repeat: no-repeat;*/
+    background-repeat: no-repeat;
     padding: 30px 30px 30px 18%;
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
     /*grid-template-rows: 1fr 1fr 1fr 1fr;*/
     grid-template-areas: 
-        "h1 h1 h1 h1 h1"
-        "gbImg1 gbImg1 . . ."
-        ". . . gbImg2 gbImg2"
-        "gbTxt1 gbTxt1 gbTxt1 gbTxt1 gbTxt1"
-        "gbTxt2 gbTxt2 gbTxt2 gbTxt2 gbTxt2"
-        "gbTxt3 gbTxt3 gbTxt3 gbTxt3 gbTxt3";
+        ". . h1 h1 h1"
+        ". . gbTxt1 gbTxt1 gbImg1"
+        ". . gbTxt2 gbTxt2 gbImg1"
+        ". . gbTxt3 gbTxt3 .";
 }
 
 #omGBimg1 {
     grid-area: gbImg1;
 }
 
-#omGBimg2 {
+/*#omGBimg2 {
     grid-area: gbImg2;
-}
+}*/
 
 #omGBtxt1 {
+    color: #fff;
     grid-area: gbTxt1;
 }
 
 #omGBtxt2 {
+    color: #fff;
     grid-area: gbTxt2;
 }
 
 #omGBtxt3 {
+    color: #fff;
+    font-size: 120%;
     grid-area: gbTxt3;
+}
+
+.green {
+    color: #34733d;
+    font-weight: 700;
 }
 
 #kage1 {
@@ -300,6 +312,10 @@ nav ul li a img {
         ". sparLogo mkLogo menyLogo .";
 }
 
+#butikker h1 {
+    text-align: center;
+}
+
 #sparLogo {
     width: 70%;
     margin: auto;
@@ -332,7 +348,7 @@ h1 {
     font-weight: 700;
     margin: 0 0 20px 0;
     width: 100%;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     grid-area: h1;
 }
@@ -584,12 +600,25 @@ footer {
         background-color: #34733d;
         position: fixed;
         top: -20px;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-areas: 
+            "burger mobillogo .";
+    }
+            
+    #mobilLogo {
+        display: block;
+        margin:  2.5px auto;
+        height: 24px;
+        grid-area: mobillogo;
     }
     
     .burgermenu {
         position: relative;
         top: 0;
         display: block;
+        grid-area: burger;
         }
 
     .burgerknap {
@@ -658,6 +687,10 @@ footer {
         padding: 0 0 10px;
     }
     
+    #omGBtxt3 {
+        font-size: 100%;
+    }
+    
     #omGBimg1 {
         display: block;
         width: 100%;
@@ -691,6 +724,7 @@ footer {
 
     /*************** GÆLDER ALT I KATEGORI ***************/
     h1 {
+        text-align: center;
         font-size: 120%;
         margin: 15px 0 0 0;
     }
