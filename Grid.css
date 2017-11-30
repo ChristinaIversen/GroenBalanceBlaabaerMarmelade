@@ -1,5 +1,7 @@
 /**************GRID FOR WRAPPER***************/
 
+@media screen and (max-width: 800px) {
+
 #wrapper {
     font-size: 1em;
     color: #000000;
@@ -8,15 +10,15 @@
     border-style:solid;
 
     display: grid;
-    grid-template-columns: 0.4fr 1fr 1fr 1fr; 
+    grid-template-columns: 0.4fr 1fr 1fr 1fr 1fr 1fr 1fr; 
     grid-template-rows: 0.5fr 1.3fr 1fr 1fr 1fr 0.3fr;
     grid-template-areas: 
         "header header  header  header"
-        "nav   hero     hero    hero"
-        "nav   hero    hero    hero"
-        "nav  separator   separator   separator"
-        "nav   innerwrapper    innerwrapper    innerwrapper"
-        "nav footer  footer  footer";
+        "nav   hero     hero    hero    hero    hero    hero"
+        "nav   hero    hero    hero     hero    hero    hero"
+        "nav  separator   separator   separator separator   separator   separator"
+        "nav   innerwrapper    innerwrapper    innerwrapper innerwrapper    innerwrapper    innerwrapper"
+        "nav footer  footer  footer footer  footer  footer";
 }
 
 
@@ -59,14 +61,15 @@
     background-color: dimgrey;
 }
 
-
-
-/****************Innerwrapper***************/
-
-#innerWrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-        ""
 }
+
+
+
+# h1 {
+    grid-area: h1;
+    background-color: aquamarine;
+}
+
+
+
+#
