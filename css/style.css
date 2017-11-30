@@ -797,11 +797,21 @@ footer {
     #kage1Img2 {
         display: none;
     }
+    
+    #kage1Img {
+        margin-top: 0;
+        padding-right: 0;
+    }
 
     /************************ KAGE 2 *********************/
     #kage2 {
         padding: 0 0 10px;
     }   
+    
+    #kage2Img {
+        margin-top: 0;
+        padding-right: 0;        
+    }
 
     /********************** BUTIKKER *********************/
     #butikker {    
