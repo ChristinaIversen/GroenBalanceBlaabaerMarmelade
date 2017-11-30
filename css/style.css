@@ -417,34 +417,36 @@ footer {
 /******************************************************************************/
 /************************************ TABLET **********************************/
 /******************************************************************************/
-@media screen and (max-width: 768px) {       
-/*********************** GRID ************************/
+@media screen and (max-width: 768px) {    
+    /*********************** BODY ************************/
+    body {
+        font-size: 90%;
+    }    
+    
+    /*********************** GRID ************************/
     #omMarmelade {
         grid-gap: 0px;
         grid-template-areas: 
             "img0 img0 img0 img0 img0"
             "h1 h1 h1 h1 h1"
             "blaabaer blaabaer blaabaer blaabaer blaabaer"
-            "naering naering naering naering kj"
-            "info info info info info";
+            "naering naering kj info info";
     }
     
     #omGroenBalance {
         grid-gap: 0px;
         grid-template-areas: 
-            ". gbImg1 gbImg1 gbImg1 ."
-            "h1 h1 h1 h1 h1"
-            "gbTxt1 gbTxt1 gbTxt1 gbTxt1 gbTxt1"
-            "gbTxt2 gbTxt2 gbTxt2 gbTxt2 gbTxt2"
-            "gbTxt3 gbTxt3 gbTxt3 gbTxt3 gbTxt3";
+            "h1 h1 h1 gbImg1 gbImg1"
+            "gbTxt1 gbTxt1 gbTxt1 gbImg1 gbImg1"
+            "gbTxt2 gbTxt2 gbTxt2 gbImg1 gbImg1"
+            "gbTxt3 gbTxt3 gbTxt3 gbImg1 gbImg1";
     }
     
     #kage1 {
         grid-gap: 0px;
         grid-template-areas: 
-            "kage1Img kage1Img kage1Img kage1Img kage1Img"
             "h1 h1 h1 h1 h1"
-            "ingri ingri ingri ingri ingri"
+            "ingri ingri ingri kage1Img kage1Img"
             "kage1txt1 kage1txt1 kage1txt1 kage1txt1 kage1txt1"
             "kage1txt2 kage1txt2 kage1txt2 kage1txt2 kage1txt2"
             "kage1txt3 kage1txt3 kage1txt3 kage1txt3 kage1txt3"
@@ -452,12 +454,11 @@ footer {
             "kage1txt5 kage1txt5 kage1txt5 kage1txt5 kage1txt5";
     }
     
-    #kage2{
+    #kage2 {
         grid-gap: 0px;
         grid-template-areas: 
-            "kage2Img kage2Img kage2Img kage2Img kage2Img"
             "h1 h1 h1 h1 h1"
-            "ingri ingri ingri ingri ingri"
+            "ingri ingri ingri kage2Img kage2Img"
             "kage2txt1 kage2txt1 kage2txt1 kage2txt1 kage2txt1";
     }
     
@@ -470,30 +471,24 @@ footer {
             ". menyLogo menyLogo menyLogo .";
     }
     
-    /*********************** BODY ************************/
-    body {
-        font-size: 90%;
-    }
-    
     /********************** HEADER ***********************/
+    header {
+        background-size: 190px;
+    }
+
     #guirlande {
-        
+        height: 50px;
     }
 
     /********************** MENU/LOGO ********************/
     #deskMenu a {
         display: none;
     }
-    
-    
+       
     nav {
         height: 75px;
-        width: 100%;
         background-color: rgba(52, 115, 61, 0);
-        position: fixed;
         top: -20px;
-        display: grid;
-        grid-gap: 20px;
         grid-template-columns: 1fr 1fr 1fr; 
         grid-template-areas: 
             "burger . .";
@@ -543,7 +538,14 @@ footer {
     }
     
     #gbLogo {
-        display: block; 
+        display: block;
+        width: 15%;
+        float: left;
+        padding: 20px 0;
+        position: fixed;
+        top: 40px;
+        /*grid-area: nav;*/
+        z-index: 1;
     }
     
     /********************** SEPARATOR ********************/
@@ -553,14 +555,11 @@ footer {
     
     /******************** OM MARMELADEN ******************/
     #omMarmelade {
-        background: #fff;
-        padding: 30px 0 10px;
-        vertical-align: top;
+        padding: 0 0 10px;
     }
     
     #omMarmImg0 {
-        display: block;
-        width: 100%;
+        display: none;
     }
     
     #omMarmImg1 {
@@ -577,7 +576,8 @@ footer {
     }
     
     #omGBtxt3 {
-        font-size: 100%;
+        text-align: center;
+        font-size: 140%;
     }
     
     #omGBimg1 {
@@ -596,6 +596,11 @@ footer {
         padding: 0 0 10px;
     }
     
+    #kage1Img {
+        margin-top: 20px;
+        padding-right: 20px;
+    }
+    
     #kage1Img2 {
         display: none;
     }
@@ -605,9 +610,9 @@ footer {
         padding: 0 0 10px;
     }    
 
-    /*********************** IMG SIZE ********************/
-    #omMarmelade img, #omGroenBalance img, #kage1 img, #kage2 img {
-        width: 100%;
+    #kage2Img {
+        margin-top: 20px;
+        padding-right: 20px;        
     }
 
     /********************** BUTIKKER *********************/
@@ -619,7 +624,6 @@ footer {
     /*************** GÆLDER ALT I KATEGORI ***************/
     h1 {
         text-align: center;
-        font-size: 120%;
         margin: 15px 0 0 0;
     }
     
@@ -721,6 +725,7 @@ footer {
     }
     
     nav {
+        width: 100%;
         height: 50px;
         background-color: #34733d;
         grid-template-columns: 1fr 1fr 1fr; 
@@ -738,6 +743,8 @@ footer {
     .burgerknap {
         width: 40px;
         height: 30px;
+        position: fixed;
+        top: 0;
         background-color: #34733d;
         color: #fff;
         border: none;
@@ -746,7 +753,6 @@ footer {
 
     /******************** OM MARMELADEN ******************/
     #omMarmelade {
-        background: #fff;
         padding: 30px 0 10px;
         vertical-align: top;
     }
@@ -785,7 +791,6 @@ footer {
     
     /************************ KAGE 1 *********************/
     #kage1 {
-        background: #fff;
         padding: 0 0 10px;
     }
     
@@ -796,16 +801,10 @@ footer {
     /************************ KAGE 2 *********************/
     #kage2 {
         padding: 0 0 10px;
-    }    
-
-    /*********************** IMG SIZE ********************/
-    #omMarmelade img, #omGroenBalance img, #kage1 img, #kage2 img {
-        width: 100%;
-    }
+    }   
 
     /********************** BUTIKKER *********************/
     #butikker {    
-        background: #fff;
         padding: 0 0 10px;
     }
 
