@@ -103,6 +103,10 @@ nav ul li a img {
 /******************************************************************************/
 /********************************* MAIN CONTENT *******************************/
 /******************************************************************************/
+#omMarmelade img, #omGroenBalance img, #kage1 img, #kage2 img {
+    width: 100%;
+}
+
 #hero {
     width: 100%;
     grid-area: hero;
@@ -253,7 +257,7 @@ nav ul li a img {
 
 #kage1Img2 {
     grid-area: kage1Img2;
-    margin-left: -200px;
+    margin-left: -150px;
 }
 
 .ingridienser {
@@ -327,10 +331,6 @@ nav ul li a img {
 #KogE {
     width: 100%;
     grid-area: koge;
-}
-
-#omMarmelade img, #omGroenBalance img, #kage1 img, #kage2 img {
-    width: 100%;
 }
 
 #butikker { 
@@ -417,90 +417,193 @@ footer {
 /******************************************************************************/
 /************************************ TABLET **********************************/
 /******************************************************************************/
-@media screen and (max-width: 768px) {
-       
-    /*********************HEADER*************************/
+@media screen and (max-width: 768px) {       
+/*********************** GRID ************************/
+    #omMarmelade {
+        grid-gap: 0px;
+        grid-template-areas: 
+            "img0 img0 img0 img0 img0"
+            "h1 h1 h1 h1 h1"
+            "blaabaer blaabaer blaabaer blaabaer blaabaer"
+            "naering naering naering naering kj"
+            "info info info info info";
+    }
     
-    header {
-        display: none;
+    #omGroenBalance {
+        grid-gap: 0px;
+        grid-template-areas: 
+            ". gbImg1 gbImg1 gbImg1 ."
+            "h1 h1 h1 h1 h1"
+            "gbTxt1 gbTxt1 gbTxt1 gbTxt1 gbTxt1"
+            "gbTxt2 gbTxt2 gbTxt2 gbTxt2 gbTxt2"
+            "gbTxt3 gbTxt3 gbTxt3 gbTxt3 gbTxt3";
+    }
+    
+    #kage1 {
+        grid-gap: 0px;
+        grid-template-areas: 
+            "kage1Img kage1Img kage1Img kage1Img kage1Img"
+            "h1 h1 h1 h1 h1"
+            "ingri ingri ingri ingri ingri"
+            "kage1txt1 kage1txt1 kage1txt1 kage1txt1 kage1txt1"
+            "kage1txt2 kage1txt2 kage1txt2 kage1txt2 kage1txt2"
+            "kage1txt3 kage1txt3 kage1txt3 kage1txt3 kage1txt3"
+            "kage1txt4 kage1txt4 kage1txt4 kage1txt4 kage1txt4"
+            "kage1txt5 kage1txt5 kage1txt5 kage1txt5 kage1txt5";
+    }
+    
+    #kage2{
+        grid-gap: 0px;
+        grid-template-areas: 
+            "kage2Img kage2Img kage2Img kage2Img kage2Img"
+            "h1 h1 h1 h1 h1"
+            "ingri ingri ingri ingri ingri"
+            "kage2txt1 kage2txt1 kage2txt1 kage2txt1 kage2txt1";
+    }
+    
+    #butikker {
+        grid-gap: 0px;
+        grid-template-areas: 
+            "h1 h1 h1 h1 h1"
+            ". sparLogo sparLogo sparLogo ."
+            ". mkLogo mkLogo mkLogo ."
+            ". menyLogo menyLogo menyLogo .";
+    }
+    
+    /*********************** BODY ************************/
+    body {
+        font-size: 90%;
+    }
+    
+    /********************** HEADER ***********************/
+    #guirlande {
         
     }
-    
-    #guirlande {
-        display: block;
-    
-    }
-    
-    #hero {
-        display: block;
-    }
-    
-    
+
     /********************** MENU/LOGO ********************/
-    #gbLogo {            
-        display: block;
+    #deskMenu a {
+        display: none;
     }
+    
     
     nav {
+        height: 75px;
+        width: 100%;
+        background-color: rgba(52, 115, 61, 0);
+        position: fixed;
+        top: -20px;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-areas: 
+            "burger . .";
+    }
+        
+    .burgermenu {
+        position: relative;
+        top: 0;
+        display: block;
+        grid-area: burger;
+        }
+
+    .burgerknap {
+        width: 55px;
+        height: 55px;
+        background-color: rgba(52, 115, 61, 0);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .burgerDD {
+        display: none;
+        position: absolute;
+        background-color: #34733d;
+        min-width: 200px;
+        z-index: 1;
+    }
+
+    .burgerDD a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        color: #fff;
+    }
+
+    .burgerDD a:hover {
+        background-color: #bf343f;
+    }
+
+    .burgermenu:hover .burgerDD {
         display: block;
     }
     
-    #burgermenu {
-        display: contents;
+    .burgermenu:hover::after {
+        display: none;
+    }
+    
+    #gbLogo {
+        display: block; 
     }
     
     /********************** SEPARATOR ********************/
     #separator {
         display: none;
     }
-
+    
     /******************** OM MARMELADEN ******************/
     #omMarmelade {
-        background: #d9c7c5;
-        padding: 10px 0 20px;
+        background: #fff;
+        padding: 30px 0 10px;
         vertical-align: top;
     }
     
     #omMarmImg0 {
-        display: none;
+        display: block;
         width: 100%;
     }
     
     #omMarmImg1 {
-        display: none;
-        float: right; 
-        
+        display: none;    
     }
 
     #omMarmImg2 {
         display: none;
-        float: right;
     }
     
     /******************* OM GRØN BALANCE *****************/
     #omGroenBalance {
-        padding: 10px 0 20px;
+        padding: 0 0 10px;
+    }
+    
+    #omGBtxt3 {
+        font-size: 100%;
     }
     
     #omGBimg1 {
-        
+        display: block;
+        width: 100%;
+        margin-top: 20px;
     }
 
     #omGBimg2 {
         display: none;
-        float: right;
     }
     
     /************************ KAGE 1 *********************/
     #kage1 {
-        background: #d9c7c5;
-        padding: 10px 0 20px;
+        background: #fff;
+        padding: 0 0 10px;
+    }
+    
+    #kage1Img2 {
+        display: none;
     }
 
     /************************ KAGE 2 *********************/
     #kage2 {
-        padding: 10px 0 20px;
-    }
+        padding: 0 0 10px;
+    }    
 
     /*********************** IMG SIZE ********************/
     #omMarmelade img, #omGroenBalance img, #kage1 img, #kage2 img {
@@ -509,14 +612,15 @@ footer {
 
     /********************** BUTIKKER *********************/
     #butikker {    
-        background: #d9c7c5;
-        padding: 10px 0 20px;
+        background: #fff;
+        padding: 0 0 10px;
     }
 
     /*************** GÆLDER ALT I KATEGORI ***************/
     h1 {
+        text-align: center;
         font-size: 120%;
-        margin: 10px 0 20px 0;
+        margin: 15px 0 0 0;
     }
     
     section p {
@@ -530,14 +634,8 @@ footer {
 
     #juletraer {
         height: 56px;   
-    }
-
-    #footerText {
-        font-size: 90%;
-    }        
-        
+    }    
 }
-
 
 /******************************************************************************/
 /************************************ MOBILE **********************************/
@@ -624,12 +722,7 @@ footer {
     
     nav {
         height: 50px;
-        width: 100%;
         background-color: #34733d;
-        position: fixed;
-        top: -20px;
-        display: grid;
-        grid-gap: 20px;
         grid-template-columns: 1fr 1fr 1fr; 
         grid-template-areas: 
             "burger mobillogo .";
@@ -641,13 +734,6 @@ footer {
         height: 24px;
         grid-area: mobillogo;
     }
-    
-    .burgermenu {
-        position: relative;
-        top: 0;
-        display: block;
-        grid-area: burger;
-        }
 
     .burgerknap {
         width: 40px;
@@ -656,38 +742,6 @@ footer {
         color: #fff;
         border: none;
         cursor: pointer;
-    }
-
-    .burgerDD {
-        display: none;
-        position: absolute;
-        background-color: #34733d;
-        min-width: 200px;
-        z-index: 1;
-    }
-
-    .burgerDD a {
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        color: #fff;
-    }
-
-    .burgerDD a:hover {
-        background-color: #bf343f;
-    }
-
-    .burgermenu:hover .burgerDD {
-        display: block;
-    }
-    
-    .burgermenu:hover::after {
-        display: none;
-    }
-    
-    /********************** SEPARATOR ********************/
-    #separator {
-        display: none;
     }
 
     /******************** OM MARMELADEN ******************/
@@ -734,15 +788,15 @@ footer {
         background: #fff;
         padding: 0 0 10px;
     }
-
-    /************************ KAGE 2 *********************/
-    #kage2 {
-        padding: 0 0 10px;
-    }
     
     #kage1Img2 {
         display: none;
     }
+
+    /************************ KAGE 2 *********************/
+    #kage2 {
+        padding: 0 0 10px;
+    }    
 
     /*********************** IMG SIZE ********************/
     #omMarmelade img, #omGroenBalance img, #kage1 img, #kage2 img {
@@ -766,15 +820,7 @@ footer {
         padding: 15px;
     }
 
-    /*********************** FOOTER **********************/
-    footer {
-        background-size: 150px;
-    }
-
-    #juletraer {
-        height: 56px;   
-    }
-
+    /*********************** FOOTER **********************/ 
     #footerText {
         font-size: 90%;
     }    
