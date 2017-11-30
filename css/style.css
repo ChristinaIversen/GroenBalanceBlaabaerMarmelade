@@ -117,6 +117,16 @@ nav ul li a img {
     vertical-align: bottom;
 }
 
+/*#hero a {
+    position: relative;
+    bottom: 70px;
+    left: 45.5%;
+}
+
+.fa-arrow-circle-down {
+    color: rgba(255, 255, 255, 0.5);
+}*/
+
 #separator {
     background-repeat: repeat-x;
     background-image: url("../grafik/candy-cane.png");
