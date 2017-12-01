@@ -543,10 +543,6 @@ footer {
         display: block;
     }
     
-    .burgermenu:hover::after {
-        display: none;
-    }
-    
     #gbLogo {
         display: block;
         width: 15%;
